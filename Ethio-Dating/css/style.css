@@ -1,0 +1,548 @@
+/* 
+##################################################
+   # HERO SECTION 
+##################################################  
+*/
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to left,
+      rgba(23, 87, 146, 0.4),
+      rgba(23, 87, 146, 1)
+    ),
+    url(/image/hero-1.jpg);
+  /* background-image: -webkit-image-set(
+    linear-gradient(to left, rgba(23, 87, 146, 0.4), rgba(23, 87, 146, 1)),
+    url("/image/hero-2-edit.webp") 1x
+  ); */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  grid-template-columns: 1fr;
+  gap: 9.6rem;
+
+  overflow-x: hidden;
+}
+
+.header-nav {
+  padding: 3.2rem 2.4rem 0 3.2rem;
+  height: 8rem;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo-img {
+  width: 20rem;
+  height: 20rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* .main-nav {
+  width: 100%;
+} */
+
+.nav-item {
+  gap: 4.4rem;
+}
+
+.nav-list {
+  list-style: none;
+  position: relative;
+}
+
+.nav-list:not(:last-child):before {
+  content: "";
+  display: inline-block;
+  background-color: #fff;
+  width: 0;
+  height: 0;
+
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.nav-list:hover.nav-list:not(:last-child):before {
+  width: 100%;
+  height: 4px;
+}
+
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.header-text {
+  grid-row: 2;
+  align-self: start;
+  width: 50%;
+  padding-left: 3.2rem;
+  color: #fff;
+
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.text {
+  padding-right: 4.8rem;
+  font-size: 1.8rem;
+  color: #dee2e6;
+  line-height: 1.7;
+}
+
+/* 
+##################################################
+   # HOW IT WORKS SECTION 
+##################################################  
+*/
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.boxs {
+  gap: 9.6rem;
+}
+
+.box-one,
+.box-two {
+  padding: 0 4.4rem;
+  justify-items: center;
+}
+
+.box-one-text,
+.box-two-text {
+  background-color: #4683bc;
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.05);
+  border-radius: 11px;
+  padding: 12.8rem 3.2rem 4.4rem 3.2rem;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: flex-start;
+}
+
+.how-heading {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.box-one-text,
+.box-two-text p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.box-one-img,
+.box-two-img {
+  width: 80%;
+  transform: translateY(10rem);
+}
+
+/* 
+##################################################
+   # TESTIMONIAL SECTION 
+##################################################  
+*/
+.section-testimonial {
+  padding: 9.6rem 0;
+  background-color: #e8f0f7;
+}
+
+.testi-img {
+  width: 100%;
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.testi-container {
+  flex-direction: column;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.testimonial-box {
+  display: grid;
+  grid-template-columns: 200px 600px;
+  align-items: center;
+  column-gap: 4.4rem;
+  position: relative;
+}
+
+.sub-heading {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.testimonial-box p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: #333;
+  padding-right: 0 6.4rem;
+}
+
+.testi-box2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.testi-box3 {
+  grid-row: 3;
+}
+
+.testimonial-box.testi-box2 {
+  grid-template-columns: 600px 200px;
+}
+
+.testi-box2 .testi-img {
+  grid-column: 2;
+}
+
+.testi-box2 .testimonial-box-text {
+  grid-row: 1;
+}
+
+.testimonial-box-text {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+  padding: 0 4.4rem;
+}
+
+.testi-box1 .testimonial-box-text::before,
+.testi-box2 .testimonial-box-text::before,
+.testi-box3 .testimonial-box-text::before {
+  content: "";
+  display: inline-block;
+  background-color: #1864ab;
+  width: 40%;
+  height: 100%;
+  position: absolute;
+}
+
+.testi-box1 .testimonial-box-text::before,
+.testi-box3 .testimonial-box-text::before {
+  clip-path: polygon(100% 43%, 0 0, 0 100%);
+  top: 2.4rem;
+  left: -9.6rem;
+}
+
+.testi-box2 .testimonial-box-text::before {
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  top: 2.4rem;
+  right: -9.6rem;
+}
+
+/* 
+##################################################
+   # CTA SECTION 
+##################################################  
+*/
+.section-cta {
+  padding: 0 0 12.8rem;
+}
+
+.cta {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(24, 100, 171, 1),
+    rgba(24, 100, 171, 1)
+  );
+
+  box-shadow: 0 1.8rem 3.2rem rgba(0, 0, 0, 0.2);
+  border-radius: 11px;
+  transform: translateY(20rem);
+  padding-right: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.cta-container {
+  padding: 3.2rem 1.8rem 2.4rem 0;
+  flex-direction: column;
+  gap: 4.4rem;
+  align-items: flex-start;
+}
+
+.cta-heading {
+  color: #fff;
+  grid-column: 1 / -1;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: start;
+  row-gap: 6.4rem;
+}
+
+.form {
+  grid-column: 1 / -1;
+  gap: 3.2rem;
+}
+
+.form label {
+  display: block;
+  font-size: 1.8rem;
+  color: #dee2e6;
+  margin-bottom: 1.6rem;
+}
+
+.form input {
+  border: none;
+  padding: 1.6rem 2.4rem;
+  border-radius: 11px;
+}
+
+.form input::placeholder {
+  color: #8f8f8f;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.option {
+  gap: 9.6rem;
+  align-items: flex-start;
+}
+
+.option-one,
+.option-two {
+  flex-direction: column;
+  gap: 2.4rem;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+
+.option-one div {
+  margin-left: 2.4rem;
+}
+
+.option-one div,
+.option-two div {
+  align-self: flex-start;
+  margin-left: 6.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.option-one label,
+.option-two label {
+  align-self: flex-start;
+  display: block;
+  font-size: 2.4rem;
+  color: #e8f0f7;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: 1px solid #74c0fc;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #1864ab;
+  margin: 0;
+
+  /*  to align the :before to the horizontal and 
+    vertical center of our custom control. */
+  display: grid;
+  place-content: center;
+
+  /* Windows High Contrast Mode */
+  /* background-color: CanvasText; */
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: #1864ab;
+  transition: 120ms transform ease-in-out;
+  /* Use of box-shadow instead of background-color will
+     enable the state of the radio to be visible when printed */
+  /* box-shadow: inset 1rem 1rem rgba(0, 0, 0, .5); */
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1.5);
+}
+
+/* Focus state */
+
+input[type="radio"]:focus {
+  outline: max(2px, 0.15rem) solid #74c0fc;
+  outline-offset: max(2px, 0.15rem);
+}
+
+.option-one span,
+.option-two span {
+  font-size: 1.8rem;
+  color: #dee2e6;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to left bottom,
+      rgba(24, 100, 171, 0.5),
+      rgba(24, 100, 171, 0.6)
+    ),
+    url(/image/cta-img.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 11px;
+}
+/* 
+##################################################
+   # FOOTER SECTION 
+##################################################  
+*/
+.footer {
+  padding: 15rem 0 6.4rem;
+  background: #eee;
+
+  gap: 4.4rem;
+}
+
+.cont-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr repeat(3, 1fr);
+  justify-items: center;
+  gap: 4.4rem;
+}
+
+.footer-logo .logo {
+  /* color: #444; */
+  width: 20rem;
+  height: 20rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #343a40;
+}
+
+.footer-items {
+  list-style: none;
+}
+
+.social-link a:link,
+.social-link a:visited,
+.footer-items a:link,
+.footer-items a:visited,
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #495057;
+  line-height: 1.6;
+  transition: all 0.3s;
+}
+
+.footer-items a:hover,
+.footer-items a:active,
+.footer-link:hover,
+.footer-link:active {
+  color: #212529;
+}
+
+.contacts p,
+.footer-list {
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+.footer-container {
+  border-top: 1px solid #a7a7a7;
+}
+
+.footer-copy {
+  padding: 2.4rem 0 0;
+  justify-items: center;
+}
+
+.copyright p {
+  font-size: 1.6rem;
+  color: #8f8f8f;
+  letter-spacing: 1px;
+}
+
+.social-link {
+  gap: 3.2rem;
+}
+
+.social-logo {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #4683bc;
+  transition: all 0.3s;
+}
+
+.social-logo:hover {
+  color: #1864ab;
+}
+
+/* 
+##################################################
+   # MOBILE NAVIGATION 
+##################################################  
+*/
+
+.btn-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  width: 4.4rem;
+  height: 4.4rem;
+  color: #eee;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* /////////////////////////////////////////////////// */
+/* ######### STICKY NAVIGATION ########## */
+/* /////////////////////////////////////////////////// */
+.sticky .header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(24, 100, 171, 0.9);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #1864ab;
+
+  /* justify-content: space-around; */
+}
+
+.sticky .header-text {
+  margin-top: 9.6rem;
+}

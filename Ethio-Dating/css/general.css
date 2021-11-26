@@ -1,0 +1,219 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+##################################################
+   # Type scale
+################################################## 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+## For Normal Text: 16px - 33px
+## For long Text: 20px or bigger
+## For headlines: 50px above 600+ depend on personality
+## For any text under 400+ (regular)
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1 
+Small: 1.2
+Medium: 1.5
+Paragraph default: 1.6
+Large: 1.7
+
+--- 02 COLORS
+
+- Primary: #1864ab;
+- Tints:
+ #74c0fc
+- Shades: 
+#4683bc
+#4683bc
+###
+- Accents:
+- Greys
+#444
+#343a40
+#495057
+#8f8f8f
+#e8f0f7
+#dee2e6
+
+--- 06 BORDER-RADIUS
+Default: 11px
+Medium: 50% - rounded
+
+*/
+/* 
+##################################################
+   # GENERAL STYLE 
+##################################################  
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* 
+##################################################
+   # REUSABLE CODE 
+##################################################  
+*/
+.container {
+  /* 1300px */
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.heading-primary {
+  /* align-self: end; */
+  font-size: 4.4rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #1864ab;
+}
+
+.heading-teritary {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+/* 
+##################
+   # Btn
+##################
+*/
+
+.cta-btn,
+.sign:link,
+.sign:visited,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 11px;
+  font-size: 1.8rem;
+  color: #1864ab;
+  font-weight: 500;
+  background-color: #eee;
+  transition: all 0.3s;
+}
+
+.btn:link,
+.btn:visited {
+  justify-self: start;
+  padding: 1.6rem 2.4rem;
+}
+
+.sign:link,
+.sign:visited {
+  align-self: center;
+  padding: 1rem 1.8rem;
+}
+
+.cta-btn {
+  border: none;
+  padding: 1.6rem 3.2rem;
+  justify-self: center;
+  align-self: end;
+  cursor: pointer;
+}
+
+.cta-btn:hover,
+.sign:hover,
+.sign:active,
+.btn:hover,
+.btn:active {
+  color: #fff;
+  background-color: #1c7ed6;
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.1);
+  transform: scale(1.07);
+}
+
+/* 
+####################
+   # GRID 
+####################
+*/
+.grid {
+  display: grid;
+}
+
+.grid-1-col {
+  grid-template-columns: 1fr;
+}
+
+.grid-2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 
+####################
+   # FLEX 
+####################
+*/
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* 
+##################################################
+   # HELPER CLASS
+##################################################  
+*/
+.margin-top-sm {
+  margin-top: 1.8rem;
+}
+
+.margin-top-md {
+  margin-top: 3.2rem;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.z-index {
+  z-index: 99;
+}
+/* 
+##################################################
+   # FOCUS STATE
+##################################################  
+*/
+
+*:focus {
+  outline: none;
+  outline-offset: 8px;
+  box-shadow: 0 0 0 0.8rem rgba(92, 148, 201, 0.6);
+}
